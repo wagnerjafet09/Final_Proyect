@@ -1,0 +1,42 @@
+{% include 'admin/ADcabecera.html' %}
+<link rel="stylesheet" href="/pure-css-animated-background/style.css">
+<br>
+
+
+<input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+
+
+
+
+  <div class="container" >
+    <div class="row">
+      <!-- Columna de texto -->
+      <div class="col-md-8">
+
+        <div class="p-5 mb-4 bg-light-gray rounded-3">
+          <div class="container-fluid py-6">
+            <br>
+            <br>
+            <br>
+            <p class="display-6 fw-bold">Welcome <strong> {{ current_user.fullname }} </strong> al administrador de libros.</p>
+            <br>
+            <p class="col-md-10 fs-5">Aqui podrás administrar tus libros del sitio web.</p>
+            <p>
+              <a class="btn btn-dark btn-lg" href="/site/admin/libros" role="button">Empezar la gestion</a>
+            </p>
+          </div>
+        </div>
+
+      </div>
+      
+      <!-- Columna de imagen -->
+      <div class="col-md-4">
+        <br>
+        <img class="img-fluid" src='{{ url_for("user.static", filename="img/Adminindex.png") }}'  alt="Library Image">
+      </div>
+    </div>
+  </div>
+
+
+
+{% include 'admin/ADpie.html' %}
