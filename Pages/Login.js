@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         const formData = new FormData(e.target);
         const jsonData = JSON.stringify(Object.fromEntries(formData));
-        fetch('https://localhost:7230/api/Bibliotecario/InicioDeSesion', {
+        fetch('https://localhost:7037/api/Usuario/InicioDeSesion', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

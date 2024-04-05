@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         const formData = new FormData(e.target);
         const jsonData = JSON.stringify(Object.fromEntries(formData));
-        fetch('https://localhost:7230/api/Bibliotecario/Registro', {
+        fetch('https://localhost:7037/api/Usuario/Registro', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
