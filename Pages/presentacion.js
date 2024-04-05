@@ -15,7 +15,10 @@ fetch('https://localhost:7037/api/Libro')
           </div>
         </div>
       `;
-      document.getElementById('card-father').innerHTML += card;
+      if(document.getElementById('card-father') != null){
+        document.getElementById('card-father').innerHTML += card;
+      }
+      
     });
   })
   .catch(error => console.error('Error:', error));

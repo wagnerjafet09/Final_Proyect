@@ -88,50 +88,39 @@
   <div class="row">
       <div class="col-md-12 col-lg-4">
           <div class="text-center">
-              <img src="/Pages/img/2024002044_padre.jpg" alt="Imagen del libro" class="img-fluid" style="max-width: 100%; height: auto; border: 1px solid;">
+              <img id="imagenLibro" src="/Pages/img/2024002044_padre.jpg" alt="Imagen del libro" class="img-fluid" style="max-width: 100%; height: auto; border: 1px solid;">
               
               <div style="   display: flex; padding-left: 35px; padding-right: 35px; justify-content: space-between; align-items: center
 
               ">
-                <a href="/Pages/plantillas/Reservados.html" class="btn btn-primary mt-3">Reservar</a>
+                <a id="reservarBtn"  class="btn btn-primary mt-3">Reservar</a>
                 <p>Sosto:13,013</p>
               </div>
           </div>
       </div>
       <div class="col-md-12 col-lg-8">
-          <h1><strong>Título del Libro</strong></h1>
-          <br>
-          <div class="row">
-              <div class="col-md-6">
-                  <label><strong>Autor</strong></label>
-                  <p>Autor del libro</p>
-              </div>
-              <div class="col-md-6">
-                  <label><strong>Editorial</strong></label>
-                  <p>Editorial del libro</p>
-              </div>
-          </div>
-          <div class="row">
-              <div class="col-md-6">
-                  <label><strong>Año</strong></label>
-                  <p>Año de publicación</p>
-              </div>
-              <div class="col-md-6">
-                  <label><strong>Categoría</strong></label>
-                  <p>Categoría del libro</p>
-              </div>
-          </div>
-          <div class="row">
-              <div class="col-md-12">
-                  <label><strong>Descripción</strong></label>
-                  <p>Descripción del libro</p>
-              </div>
-          </div>
+        <h1 id="tituloLibro"></h1>
+        <div class="row">
+            <div class="col-md-6">
+                <label><strong>Autor</strong></label>
+                <p id="autorLibro"></p>
+            </div>
+            <div class="col-md-6">
+                <label><strong>Género</strong></label>
+                <p id="generoLibro"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <label><strong>Descripción</strong></label>
+                <p id="descripcionLibro"></p>
+            </div>
+        </div>
+        
       </div>
   </div>
 </div>
 
-<script src="../presentacion.js"></script>
-
+<script src="../detalles.js"></script>
 </body>
 </html>
