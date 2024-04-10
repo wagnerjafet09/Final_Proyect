@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         const formData = new FormData(e.target);
         const jsonData = JSON.stringify(Object.fromEntries(formData));
-        fetch('https://localhost:7230/api/Bibliotecario/InicioDeSesion', {
+        fetch('https://localhost:7037/api/Usuario/InicioDeSesion', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -75,11 +75,15 @@ document.addEventListener('DOMContentLoaded', function() {
             throw new Error('La respuesta de la API no fue exitosa');
         }).then(data => {
             if (data.success) {
+
+                localStorage.setItem('userID', data.data.id);
                 // Redireccionar a Register.html si la autenticación es correcta
                 window.location.href = '/Pages/plantillas/presentacion.html';
                 console.log("Inicio de sesión exitoso");
+                console.log(data.data.id);
             } else {
                 console.log("Inicio de sesión fallido: " + data.message);
+                alert("Inicio de sesion fallido: revise sus credenciales")
             }
         }).catch(error => {
             console.error('Error al enviar la solicitud:', error);

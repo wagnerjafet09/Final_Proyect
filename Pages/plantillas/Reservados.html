@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/Pages/styles/search.css" />
+    <link rel="stylesheet" href="/Pages/styles/bootstrap.min.css" />
+
+    <!-- buscar -->
+    <link
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      .carousel-fade .carousel-item {
+  opacity: 0;
+  transition: opacity 0.5s linear;
+}
+
+.carousel-fade .carousel-item.active {
+  opacity: 1;
+}
+      .white {
+        color: white !important;
+      }
+      .menu-dark {
+        background-color: rgb(0, 0, 0);
+      }
+      .flexible {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- navbar-light bg-light -->
+    <nav class="navbar navbar-expand-lg menu-dark white">
+      <a
+        class="navbar-brand"
+        href="#"
+        style="
+          font-size: 24px;
+          color: #ffffff !important;
+          font-family: Georgia, 'Times New Roman', Times, serif;
+        "
+        >Bibliotech</a
+      >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div
+        class="collapse navbar-collapse"
+        id="navbarSupportedContent"
+        style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
+      >
+        <ul class="navbar-nav mr-auto">
+          <!-- <li class="nav-item active">
+            <a class="nav-link white" href="#"
+              >Inicio <span class="sr-only">(current)</span></a
+            >
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link white" href="/Pages/plantillas/presentacion.html">Libros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link white" href="#">Recomendados</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link white" href="/Pages/plantillas/Prestados.html">Prestados</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link white" href="">Reservados</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <div class="search-container">
+            <input
+              type="text"
+              name="search"
+              placeholder="Buscar..."
+              class="search-input"
+            />
+            <a href="#" class="search-btn" style="color: #5cbdbb !important">
+              <i class="fas fa-search" style="color: #000000 !important"></i>
+            </a>
+          </div>
+          <br />
+        </form>
+        <br />
+        <div style="padding-left: 2%">
+          <button class="btn btn-dark my-2 my-sm-0" type="submit">
+            Cerrar
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row" style="background-color: rgb(216, 216, 216);">
+        <div class="col-md-8" >
+          <section >
+            <div style="height: 80px;  display: flex;  align-items: center;">
+              <h2>Libros Recomendados</h2>
+
+            </div>
+            <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel" data-interval="5000" style="overflow: hidden;">
+              <div class="carousel-inner">
+                <div>
+                  <div class="carousel-item active">
+                    <div class="d-flex justify-content-between">
+                      <img src="/Pages/img/2024000146_habitos.jpg" class="d-block" alt="Libro 1" style="max-width: 30%;">
+                      <img src="/Pages/img/2024002044_padre.jpg" class="d-block" alt="Libro 2" style="max-width: 30%;">
+                      <img src="/Pages/img/2024002340_MonjeQueVendioSuFerrari.jpg" class="d-block" alt="Libro 3" style="max-width: 30%;">
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="d-flex justify-content-between">
+                      <img src="/Pages/img/2024002340_MonjeQueVendioSuFerrari.jpg" class="d-block" alt="Libro 3" style="max-width: 30%;">
+                      <img src="/Pages/img/2024002044_padre.jpg" class="d-block" alt="Libro 2" style="max-width: 30%;">
+                      <img src="/Pages/img/2024000146_habitos.jpg" class="d-block" alt="Libro 1" style="max-width: 30%;">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Siguiente</span>
+              </a>
+            </div>
+          </section>
+        
+        </div>
+        
+        
+      
+      
+      
+      
+      
+
+
+
+        <div class="col-md-4 p-0" style="height: fit-content;">
+            <section>
+              <div class="card mb-3">
+                <div class="card-header" style="display: flex; justify-content: space-evenly;">
+                  <div>
+                    <h5 class="card-title">Reservas de Libros</h5>
+                  <!-- Agregamos alguna información representativa, como el número total de reservas -->
+                  <p class="card-text">Total de reservas: 10</p>
+                  </div>
+                  
+                  <div class="col-md-4">
+                    <a href="#" class="btn btn-primary">Formas de pago</a>
+                  </div>
+                </div>
+                
+                <div class="card-body" style="height: calc(100vh - 150px); overflow-y: scroll;">
+
+
+
+                  <!-- Agregamos un componente de lista para mostrar todas las reservas -->
+                  <ul id="lista-reservas" class="list-group">
+
+                    <!-- <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8" >
+                              <h3 class="card-title">Habitos Atomicos</h3>
+                              <p class="card-text">Reservado por: Usuario 1</p>
+                              <p class="card-text">Fecha: 3/4/2023</p>
+                              <div class="row">
+                                  <div class="col-md-8" >
+                                      <div style="display: flex; width: 200px;">
+                                          <div class="col-md-4">
+                                              <a href="#" class="btn btn-primary">Retirar</a>
+                                          </div>
+                                          <hr>
+                                          <div class="col-md-6">
+                                              <a href="#" class="btn btn-danger">Cancelar</a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                              <img
+                                src="/Pages/img/2024000146_habitos.jpg"
+                                alt="Portada Libro 1"
+                                class="img-fluid"
+                              />
+                            </div>
+                          </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8" >
+                              <h3 class="card-title">Habitos Atomicos</h3>
+                              <p class="card-text">Reservado por: Usuario 1</p>
+                              <p class="card-text">Fecha: 3/4/2023</p>
+                              <div class="row">
+                                  <div class="col-md-8" >
+                                      <div style="display: flex; width: 200px;">
+                                          <div class="col-md-4">
+                                              <a href="#" class="btn btn-primary">Retirar</a>
+                                          </div>
+                                          <hr>
+                                          <div class="col-md-6">
+                                              <a href="#" class="btn btn-danger">Cancelar</a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                              <img
+                                src="/Pages/img/2024000146_habitos.jpg"
+                                alt="Portada Libro 1"
+                                class="img-fluid"
+                              />
+                            </div>
+                          </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8" >
+                              <h3 class="card-title">Habitos Atomicos</h3>
+                              <p class="card-text">Reservado por: Usuario 1</p>
+                              <p class="card-text">Fecha: 3/4/2023</p>
+                              <div class="row">
+                                  <div class="col-md-8" >
+                                      <div style="display: flex; width: 200px;">
+                                          <div class="col-md-4">
+                                              <a href="#" class="btn btn-primary">Retirar</a>
+                                          </div>
+                                          <hr>
+                                          <div class="col-md-6">
+                                              <a href="#" class="btn btn-danger">Cancelar</a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                              <img
+                                src="/Pages/img/2024000146_habitos.jpg"
+                                alt="Portada Libro 1"
+                                class="img-fluid"
+                              />
+                            </div>
+                          </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8" >
+                              <h3 class="card-title">Habitos Atomicos</h3>
+                              <p class="card-text">Reservado por: Usuario 1</p>
+                              <p class="card-text">Fecha: 3/4/2023</p>
+                              <div class="row">
+                                  <div class="col-md-8" >
+                                      <div style="display: flex; width: 200px;">
+                                          <div class="col-md-4">
+                                              <a href="#" class="btn btn-primary">Retirar</a>
+                                          </div>
+                                          <hr>
+                                          <div class="col-md-6">
+                                              <a href="#" class="btn btn-danger">Cancelar</a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                              <img
+                                src="/Pages/img/2024000146_habitos.jpg"
+                                alt="Portada Libro 1"
+                                class="img-fluid"
+                              />
+                            </div>
+                          </div>
+                    </li> -->
+
+                  </ul>
+
+
+
+
+                </div>
+              </div>
+            </section>
+          </div>
+          
+
+
+
+
+
+        
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+  <script src="../Reservados.js"></script>
+</html>
+
+<!-- 
+
+
+
+<div class="col-md-4">
+    <section>
+      <h2>Reservas de Libros</h2>
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-9">
+              <h3 class="card-title">Hábitos Atómicos</h3>
+              <p class="card-text">Reservado por: Usuario 1</p>
+              <p class="card-text">Fecha: 3/4/2023</p>
+            </div>
+            <div class="col-md-3">
+              <img src="/Pages/img/2024000146_habitos.jpg" alt="Portada Libro 1" class="img-fluid">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="btn-group" role="group">
+                <button type="button" class="btn btn-primary">Pagar</button>
+                <button type="button" class="btn btn-danger">Quitar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+   -->
