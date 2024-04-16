@@ -1,21 +1,13 @@
-let userID = localStorage.getItem("userID");
+const userID = localStorage.getItem('userID'); // Obtener ID del usuario del localStorage
 
-function generateRandomCode(length) {
-  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-  let code = '';
-  for (let i = 0; i < length; i++) {
-      code += characters.charAt(Math.floor(Math.random() * characters.length));
-  }
-  return code;
-}
 
 function retirarReserva(idUsuario, idLibro) {
-  // Usage
-const randomCode = generateRandomCode(8); // Generate an 8-character random code
-console.log(randomCode);
-
-  confirmando = confirm('¿Está seguro que desea retirar el libro?')
-  if(confirmando == true){
+  let confirmando = null;
+  while (confirmando === null || confirmando === '') {
+    confirmando = prompt('Introduzca el codigo para retirar el libro')
+  }
+  randomCode = localStorage.getItem('randomCode');
+  if(confirmando == randomCode){
     const datosPrestamo = {
       idUsuario: idUsuario,
       idLibro: idLibro
@@ -39,12 +31,18 @@ console.log(randomCode);
       .then(data => {
         console.log('Operación de préstamo realizada con éxito:', data);
         window.location.reload(); // Recargar la página
+        alert('Libro retirado con exito 😉');
 
         // Aquí puedes agregar lógica adicional si lo deseas
       })
       .catch(error => {
         console.error('Error al realizar la operación de préstamo:', error);
+        alert('No se ha podido retirar el Libro, intente nuevamente');
+
       });
+  }
+  else{
+    alert('Codigo incorrecto, intente nuevamente');
   }
 }
 
