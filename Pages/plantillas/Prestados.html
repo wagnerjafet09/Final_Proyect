@@ -41,7 +41,7 @@
             <a class="nav-link white" href="/Pages/plantillas/presentacion.html">Libros</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link white" href="#">Recomendados</a>
+              <a class="nav-link white" href="/Pages/plantillas/Recomendados.html">Recomendados</a>
           </li>
           <li class="nav-item">
             <a class="nav-link white" href="/Pages/plantillas/Prestados.html">Prestados</a>
@@ -70,7 +70,7 @@
       </div>
                 
         <div  style="padding-left: 2%;" >
-          <button class="btn btn-dark my-2 my-sm-0" type="submit">Cerrar</button>
+          <button class="btn btn-dark my-2 my-sm-0" onclick="cerrarSesion()" type="submit">Cerrar</button>
         </div>
       </div>
     </nav>
@@ -78,8 +78,8 @@
     <br>
       <div class="d-flex justify-content-center">
         <div style="width: 80%;">
-          <ul class="list-group">
-            <li class="list-group-item">
+          <ul class="list-group" id="lista-prestamos">
+            <!-- <li class="list-group-item">
               <div class="d-flex align-items-center justify-content-between">
                   <div class="media">
                       <img src="/Pages/img/2024000146_habitos.jpg" class="mr-3" alt="Portada del libro" style="width: 110px; height: auto;">
@@ -98,7 +98,7 @@
                               <p>Editorial: Nombre de la Editorial</p>
                           </div>
                         </div>
-                          <!-- Puedes agregar más información del libro aquí -->
+
                       </div>
                   </div>
                   <button class="btn btn-primary">Acción</button>
@@ -126,7 +126,7 @@
                               <p>Editorial: Nombre de la Editorial</p>
                           </div>
                         </div>
-                          <!-- Puedes agregar más información del libro aquí -->
+
                       </div>
                   </div>
                   <button class="btn btn-primary">Acción</button>
@@ -153,7 +153,7 @@
                               <p>Editorial: Nombre de la Editorial</p>
                           </div>
                         </div>
-                          <!-- Puedes agregar más información del libro aquí -->
+
                       </div>
                   </div>
                   <button class="btn btn-primary">Acción</button>
@@ -180,12 +180,12 @@
                               <p>Editorial: Nombre de la Editorial</p>
                           </div>
                         </div>
-                          <!-- Puedes agregar más información del libro aquí -->
+
                       </div>
                   </div>
                   <button class="btn btn-primary">Acción</button>
               </div>
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>
@@ -196,6 +196,8 @@
 
 
 
+      <script src="/Pages/Prestados.js"></script>
+      <script src="/Pages/navbar.js"></script>
 
 
 

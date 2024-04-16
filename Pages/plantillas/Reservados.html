@@ -83,7 +83,7 @@
             <a class="nav-link white" href="/Pages/plantillas/presentacion.html">Libros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link white" href="#">Recomendados</a>
+            <a class="nav-link white" href="/Pages/plantillas/Recomendados.html">Recomendados</a>
           </li>
           <li class="nav-item">
             <a class="nav-link white" href="/Pages/plantillas/Prestados.html">Prestados</a>
@@ -108,7 +108,7 @@
         </form>
         <br />
         <div style="padding-left: 2%">
-          <button class="btn btn-dark my-2 my-sm-0" type="submit">
+          <button class="btn btn-dark my-2 my-sm-0" onclick="cerrarSesion()" type="submit">
             Cerrar
           </button>
         </div>
@@ -125,7 +125,7 @@
             </div>
             <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel" data-interval="5000" style="overflow: hidden;">
               <div class="carousel-inner">
-                <div>
+                <div id="carousel-container">
                   <div class="carousel-item active">
                     <div class="d-flex justify-content-between">
                       <img src="/Pages/img/2024000146_habitos.jpg" class="d-block" alt="Libro 1" style="max-width: 30%;">
@@ -325,8 +325,11 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  </body>
+    <script src="../navbar.js"></script>
   <script src="../Reservados.js"></script>
+
+
+  </body>
 </html>
 
 <!-- 
