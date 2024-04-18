@@ -78,6 +78,7 @@ function cancelarReserva(idReserva) {
 fetch(`https://localhost:7037/api/Reserva/ReservasConDetalle/${userID}`)
   .then(response => response.json())
   .then(data => {
+    let totalReservas = 0;
     // Manipular los datos recibidos (por ejemplo, crear las tarjetas de reserva)
     data.data.forEach(reserva => {
       let reservaItem = `
@@ -110,6 +111,9 @@ fetch(`https://localhost:7037/api/Reserva/ReservasConDetalle/${userID}`)
       if (document.getElementById('lista-reservas') != null) {
         document.getElementById('lista-reservas').innerHTML += reservaItem;
       }
+      totalReservas += 1;
+      const mensaje = document.getElementById('totalReservas');
+      mensaje.innerText = `Total de reservas: ${totalReservas}`;
 
     });
   })
