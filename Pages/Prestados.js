@@ -32,26 +32,26 @@ fetch(`https://localhost:7037/api/Prestamo/PrestamosConDetalle/${userID}`)
           </div>
         </li>
       `;
-      if(document.getElementById('lista-prestamos') != null){
+      if (document.getElementById('lista-prestamos') != null) {
         document.getElementById('lista-prestamos').innerHTML += prestamoItem;
       }
     });
   })
   .catch(error => console.error('Error:', error));
 
-  function devolverLibro(idUsuario, idLibro) {
-    confirmando = window.confirm('Está seguro de que va a devolver este Libro');
-    if(confirmando == true){
-      fetch('https://localhost:7037/api/Prestamo/DevolucionLibro', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          idUsuario: idUsuario,
-          idLibro: idLibro
-        })
+function devolverLibro(idUsuario, idLibro) {
+  confirmando = window.confirm('Está seguro de que va a devolver este Libro');
+  if (confirmando == true) {
+    fetch('https://localhost:7037/api/Prestamo/DevolucionLibro', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        idUsuario: idUsuario,
+        idLibro: idLibro
       })
+    })
       .then(response => {
         if (response.ok) {
           alert('Libro devuelto exitosamente');
@@ -61,7 +61,7 @@ fetch(`https://localhost:7037/api/Prestamo/PrestamosConDetalle/${userID}`)
         }
       })
       .catch(error => console.error('Error:', error));
-    }
-    
   }
-  
+
+}
+

@@ -1,5 +1,5 @@
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('form').addEventListener('submit', function(e) {
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelector('form').addEventListener('submit', function (e) {
         e.preventDefault();
         const formData = new FormData(e.target);
         const jsonData = JSON.stringify(Object.fromEntries(formData));

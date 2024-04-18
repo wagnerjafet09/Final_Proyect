@@ -1,16 +1,16 @@
 // function enviarSolicitud(event) {
 //     event.preventDefault();
-  
+
 //     // Obtener valores del formulario
 //     const nombreUsuario = document.getElementById("txtUser").value;
 //     const contraseña = document.getElementById("txtPassword").value;
-  
+
 //     // Crear objeto JSON con los datos del usuario
 //     const datosUsuario = {
 //       nombreUsuario,
 //       contraseña,
 //     };
-  
+
 //     // Opciones para la solicitud fetch
 //     const opciones = {
 //       method: "POST",
@@ -19,7 +19,7 @@
 //       },
 //       body: JSON.stringify(datosUsuario),
 //     };
-  
+
 //     // Enviar solicitud a la API
 //     fetch("https://localhost:7230/api/Bibliotecario/InicioDeSesion", opciones)
 //       .then((respuesta) => {
@@ -33,7 +33,7 @@
 //         if (respuestaJSON.success) {
 //           // Almacenar información del usuario en la sesión
 //           localStorage.setItem("usuario", JSON.stringify(respuestaJSON.data));
-  
+
 //           // Redirigir al usuario a la página principal
 //           window.location.href = "/Pages/plantillas/signin.html";
 //         } else {
@@ -51,14 +51,14 @@
 //         mensajeError.style.display = "block";
 //       });
 //   }
-  
+
 //   // Agregar evento submit al formulario
 //   document.getElementById("form-signin").addEventListener("submit", enviarSolicitud);
-  
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('form').addEventListener('submit', function(e) {
+
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelector('form').addEventListener('submit', function (e) {
         e.preventDefault();
         const formData = new FormData(e.target);
         const jsonData = JSON.stringify(Object.fromEntries(formData));

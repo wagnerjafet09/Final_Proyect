@@ -7,12 +7,12 @@ function retirarReserva(idUsuario, idLibro) {
     confirmando = prompt('Introduzca el codigo para retirar el libro')
   }
   randomCode = localStorage.getItem('randomCode');
-  if(confirmando == randomCode){
+  if (confirmando == randomCode) {
     const datosPrestamo = {
       idUsuario: idUsuario,
       idLibro: idLibro
     };
-  
+
     const opciones = {
       method: 'POST',
       headers: {
@@ -20,7 +20,7 @@ function retirarReserva(idUsuario, idLibro) {
       },
       body: JSON.stringify(datosPrestamo)
     };
-  
+
     fetch('https://localhost:7037/api/Prestamo/GestionPrestamo', opciones)
       .then(response => {
         if (response.ok) {
@@ -41,21 +41,21 @@ function retirarReserva(idUsuario, idLibro) {
 
       });
   }
-  else{
+  else {
     alert('Codigo incorrecto, intente nuevamente');
   }
 }
 
 function cancelarReserva(idReserva) {
   confirmando = confirm('¿Está seguro que desea cancelar la reserva?')
-  if(confirmando == true){
+  if (confirmando == true) {
     const opciones = {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json'
       }
     };
-  
+
     fetch(`https://localhost:7037/api/Reserva/CancelarReserva/${idReserva}`, opciones)
       .then(response => {
         if (response.ok) {
@@ -66,13 +66,13 @@ function cancelarReserva(idReserva) {
       .then(data => {
         window.location.reload(); // Recargar la página
         console.log('Reserva cancelada con éxito:', data);
-  
+
       })
       .catch(error => {
         console.error('Error al cancelar la reserva:', error);
       });
   }
-  
+
 }
 
 fetch(`https://localhost:7037/api/Reserva/ReservasConDetalle/${userID}`)
@@ -107,10 +107,10 @@ fetch(`https://localhost:7037/api/Reserva/ReservasConDetalle/${userID}`)
           </div>
         </li>
       `;
-      if(document.getElementById('lista-reservas') != null){
+      if (document.getElementById('lista-reservas') != null) {
         document.getElementById('lista-reservas').innerHTML += reservaItem;
       }
-      
+
     });
   })
   .catch(error => console.error('Error:', error));
