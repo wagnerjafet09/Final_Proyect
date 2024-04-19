@@ -82,7 +82,7 @@ function actualizarRandomCode(idUsuario, idLibro) {
       console.log('Codigo aleatorio enviado con éxito:', data);
       // window.location.reload();
 
-      localStorage.setItem('randomCode', data.data);
+      // localStorage.setItem('reservaCode', data.data);
 
       // Aquí puedes agregar lógica adicional si lo deseas
     })

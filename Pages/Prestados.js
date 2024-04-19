@@ -28,20 +28,24 @@ fetch(`https://localhost:7037/api/Prestamo/PrestamosConDetalle/${userID}`)
                       <!-- Puedes agregar más información del libro aquí -->
                   </div>
               </div>
-              <button class="btn btn-primary" onclick="devolverLibro(${prestamo.idUsuario}, ${prestamo.idLibro})">Devolver</button>
+              <button class="btn btn-primary" onclick="devolverLibro(${prestamo.idUsuario}, ${prestamo.idLibro}, '${prestamo.codigoAleatorio}')">Devolver</button>
           </div>
         </li>
       `;
       if (document.getElementById('lista-prestamos') != null) {
         document.getElementById('lista-prestamos').innerHTML += prestamoItem;
       }
+      // console.log(prestamo.codigoAleatorio);
     });
   })
   .catch(error => console.error('Error:', error));
 
-function devolverLibro(idUsuario, idLibro) {
-  confirmando = window.confirm('Está seguro de que va a devolver este Libro');
-  if (confirmando == true) {
+function devolverLibro(idUsuario, idLibro, randomCode) {
+  let confirmando = null;
+  confirmando = prompt('Introduzca el codigo para retirar el libro');
+  console.log(randomCode);
+
+  if (confirmando == randomCode) {
     fetch('https://localhost:7037/api/Prestamo/DevolucionLibro', {
       method: 'POST',
       headers: {
@@ -61,6 +65,12 @@ function devolverLibro(idUsuario, idLibro) {
         }
       })
       .catch(error => console.error('Error:', error));
+  }
+  else if (confirmando == null){
+    console.log('Cancelado');
+  }
+  else{
+    alert('Codigo incorrecto, intente nuevamente');
   }
 
 }
