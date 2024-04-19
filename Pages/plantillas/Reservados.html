@@ -92,7 +92,7 @@
             <a class="nav-link white" href="">Reservados</a>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
+        <!-- <form class="form-inline my-2 my-lg-0">
           <div class="search-container">
             <input
               type="text"
@@ -105,7 +105,7 @@
             </a>
           </div>
           <br />
-        </form>
+        </form> -->
         <br />
         <div style="padding-left: 2%">
           <button class="btn btn-dark my-2 my-sm-0" onclick="cerrarSesion()" type="submit">
@@ -120,7 +120,7 @@
         <div class="col-md-8" >
           <section >
             <div style="height: 80px;  display: flex;  align-items: center;">
-              <h2>Libros Recomendados</h2>
+              <h2>Libros disponibles proximamente</h2>
 
             </div>
             <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel" data-interval="5000" style="overflow: hidden;">
@@ -135,9 +135,16 @@
                   </div>
                   <div class="carousel-item">
                     <div class="d-flex justify-content-between">
-                      <img src="/Pages/img/2024002340_MonjeQueVendioSuFerrari.jpg" class="d-block" alt="Libro 3" style="max-width: 30%;">
                       <img src="/Pages/img/2024002044_padre.jpg" class="d-block" alt="Libro 2" style="max-width: 30%;">
+                      <img src="/Pages/img/2024002340_MonjeQueVendioSuFerrari.jpg" class="d-block" alt="Libro 3" style="max-width: 30%;">
                       <img src="/Pages/img/2024000146_habitos.jpg" class="d-block" alt="Libro 1" style="max-width: 30%;">
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="d-flex justify-content-between">
+                      <img src="/Pages/img/2024002340_MonjeQueVendioSuFerrari.jpg" class="d-block" alt="Libro 3" style="max-width: 30%;">
+                      <img src="/Pages/img/2024000146_habitos.jpg" class="d-block" alt="Libro 1" style="max-width: 30%;">
+                      <img src="/Pages/img/2024002044_padre.jpg" class="d-block" alt="Libro 2" style="max-width: 30%;">
                     </div>
                   </div>
                 </div>
@@ -171,7 +178,7 @@
                   <div>
                     <h5 class="card-title">Reservas de Libros</h5>
                   <!-- Agregamos alguna información representativa, como el número total de reservas -->
-                  <p class="card-text">Total de reservas: 10</p>
+                  <p id="totalReservas" class="card-text">Total de reservas: 10</p>
                   </div>
                   
                   <div class="col-md-4">
